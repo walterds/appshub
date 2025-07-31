@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (const category in appsByCategory) {
             const categoryEl = document.createElement('div');
             categoryEl.className = 'category-item';
-            categoryEl.innerHTML = `<img src="https://via.placeholder.com/120x120" alt="${category}">
+            categoryEl.innerHTML = `<img src="https://assets.codepen.io/209984/cat-${category.toLowerCase().replace(' ','-')}.png" alt="${category}">
                                     <p>${category}</p>`;
             categoryEl.addEventListener('click', () => showCategoryScreen(category));
             categoryGrid.appendChild(categoryEl);
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         appsByCategory[category].forEach(app => {
             const appEl = document.createElement('div');
             appEl.className = 'app-item';
-            appEl.innerHTML = `<img src="https://via.placeholder.com/60x60" alt="${app.title}">
+            appEl.innerHTML = `<img src="https://assets.codepen.io/209984/app-icon.png" alt="${app.title}">
                                 <div>
                                     <h3>${app.title}</h3>
                                     <p>12 MB</p>
@@ -56,12 +56,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Hamburger Menu Toggle
     const menuIcons = document.querySelectorAll('.menu-icon');
-    // You would typically have a navigation menu to toggle
-    // For this mockup, we'll just log to the console
+    const nav = document.querySelector('nav');
+
     menuIcons.forEach(icon => {
         icon.addEventListener('click', () => {
-            console.log('Menu icon clicked');
+            nav.classList.toggle('active');
         });
+    });
+
+    nav.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+            nav.classList.remove('active');
+            const targetScreen = e.target.getAttribute('href');
+            if (targetScreen.startsWith('#')) {
+                document.querySelectorAll('section').forEach(screen => {
+                    screen.style.display = 'none';
+                });
+                document.querySelector(targetScreen).style.display = 'block';
+            }
+        }
     });
 
 

@@ -26,12 +26,40 @@ body {
 }
 
 /* Main Screen */
-#main-screen .menu-icon,
-#category-screen .menu-icon,
-#app-detail-screen .menu-icon,
-#help-screen .menu-icon {
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+header .menu-icon {
     font-size: 2rem;
     cursor: pointer;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 4rem;
+    transition: left 0.3s ease;
+}
+
+nav.active {
+    left: 0;
+}
+
+nav a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
 }
 
 #main-screen .carousel,

@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav>
+        <a href="#main-screen">Main Screen</a>
+        <a href="#help-screen">Help</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+    </nav>
     <!-- Splash Screen -->
     <section id="splash-screen">
         <div class="container">
-            <img src="https://via.placeholder.com/150" alt="AppsHub Logo" class="logo">
+            <img src="https://assets.codepen.io/209984/hub-logo.svg" alt="AppsHub Logo" class="logo">
             <h1>AppsHub</h1>
             <p>Loading...</p>
         </div>
@@ -18,19 +24,22 @@
 
     <!-- Main Screen -->
     <section id="main-screen" style="display: none;">
-        <div class="container">
+        <header>
+            <a href="#main-screen"><img src="https://assets.codepen.io/209984/hub-logo.svg" alt="AppsHub Logo"></a>
             <div class="menu-icon">&#9776;</div>
+        </header>
+        <div class="container">
             <h2>Highlighted Apps</h2>
             <div class="carousel">
-                <img src="https://via.placeholder.com/300x150" alt="App 1">
-                <img src="https://via.placeholder.com/300x150" alt="App 2">
-                <img src="https://via.placeholder.com/300x150" alt="App 3">
+                <img src="https://assets.codepen.io/209984/popular-app-1.png" alt="App 1">
+                <img src="https://assets.codepen.io/209984/popular-app-2.png" alt="App 2">
+                <img src="https://assets.codepen.io/209984/popular-app-3.png" alt="App 3">
             </div>
             <h2>Categories</h2>
             <div class="category-grid"></div>
             <h2>Featured App</h2>
             <div class="featured-app">
-                <img src="https://via.placeholder.com/300x150" alt="Featured App">
+                <img src="https://assets.codepen.io/209984/featured-app.png" alt="Featured App">
                 <h3>Featured App Name</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
@@ -44,13 +53,16 @@
 
     <!-- Category Screen -->
     <section id="category-screen" style="display: none;">
-        <div class="container">
+        <header>
+            <a href="#main-screen"><img src="https://assets.codepen.io/209984/hub-logo.svg" alt="AppsHub Logo"></a>
             <div class="menu-icon">&#9776;</div>
+        </header>
+        <div class="container">
             <h2>Category Name</h2>
             <div class="carousel">
-                <img src="https://via.placeholder.com/300x150" alt="App 1">
-                <img src="https://via.placeholder.com/300x150" alt="App 2">
-                <img src="https://via.placeholder.com/300x150" alt="App 3">
+                <img src="https://assets.codepen.io/209984/popular-app-1.png" alt="App 1">
+                <img src="https://assets.codepen.io/209984/popular-app-2.png" alt="App 2">
+                <img src="https://assets.codepen.io/209984/popular-app-3.png" alt="App 3">
             </div>
             <div class="app-list"></div>
         </div>
@@ -63,32 +75,35 @@
 
     <!-- App Detail Screen -->
     <section id="app-detail-screen" style="display: none;">
-        <div class="container">
+        <header>
+            <a href="#main-screen"><img src="https://assets.codepen.io/209984/hub-logo.svg" alt="AppsHub Logo"></a>
             <div class="menu-icon">&#9776;</div>
+        </header>
+        <div class="container">
             <h2>App Title</h2>
-            <img src="https://via.placeholder.com/300x150" alt="App Hero Image" class="hero-image">
+            <img src="https://assets.codepen.io/209984/featured-app.png" alt="App Hero Image" class="hero-image">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <button class="download-btn">Download</button>
             <h3>Screenshots</h3>
             <div class="screenshot-gallery">
-                <img src="https://via.placeholder.com/200x350" alt="Screenshot 1">
-                <img src="https://via.placeholder.com/350x200" alt="Screenshot 2">
-                <img src="https://via.placeholder.com/200x350" alt="Screenshot 3">
+                <img src="https://assets.codepen.io/209984/screenshot-1.png" alt="Screenshot 1">
+                <img src="https://assets.codepen.io/209984/screenshot-2.png" alt="Screenshot 2">
+                <img src="https://assets.codepen.io/209984/screenshot-3.png" alt="Screenshot 3">
             </div>
             <h3>How to Install APK</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <h3>Similar Apps</h3>
             <div class="similar-apps">
                 <div class="app-item">
-                    <img src="https://via.placeholder.com/80x80" alt="App 1">
+                    <img src="https://assets.codepen.io/209984/similar-app-1.png" alt="App 1">
                     <p>Similar App 1</p>
                 </div>
                 <div class="app-item">
-                    <img src="https://via.placeholder.com/80x80" alt="App 2">
+                    <img src="https://assets.codepen.io/209984/similar-app-2.png" alt="App 2">
                     <p>Similar App 2</p>
                 </div>
                 <div class="app-item">
-                    <img src="https://via.placeholder.com/80x80" alt="App 3">
+                    <img src="https://assets.codepen.io/209984/similar-app-3.png" alt="App 3">
                     <p>Similar App 3</p>
                 </div>
             </div>
@@ -102,8 +117,11 @@
 
     <!-- Help Screen -->
     <section id="help-screen" style="display: none;">
-        <div class="container">
+        <header>
+            <a href="#main-screen"><img src="https://assets.codepen.io/209984/hub-logo.svg" alt="AppsHub Logo"></a>
             <div class="menu-icon">&#9776;</div>
+        </header>
+        <div class="container">
             <h2>How to Install APKs</h2>
             <div class="step">
                 <h3>Step 1: Enable Unknown Sources</h3>
