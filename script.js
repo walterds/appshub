@@ -82,33 +82,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const carousels = document.querySelectorAll('.carousel');
 
     carousels.forEach(carousel => {
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+        let scrollAmount = 0;
+        const scrollStep = 1;
+        const scrollInterval = 20;
 
-        carousel.addEventListener('mousedown', (e) => {
-            isDown = true;
-            carousel.classList.add('active');
-            startX = e.pageX - carousel.offsetLeft;
-            scrollLeft = carousel.scrollLeft;
+        function scrollCarousel() {
+            carousel.scrollLeft += scrollStep;
+            if (carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth) {
+                carousel.scrollLeft = 0;
+            }
+        }
+
+        let scrollIntervalId = setInterval(scrollCarousel, scrollInterval);
+
+        carousel.addEventListener('mouseenter', () => {
+            clearInterval(scrollIntervalId);
         });
 
         carousel.addEventListener('mouseleave', () => {
-            isDown = false;
-            carousel.classList.remove('active');
-        });
-
-        carousel.addEventListener('mouseup', () => {
-            isDown = false;
-            carousel.classList.remove('active');
-        });
-
-        carousel.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - carousel.offsetLeft;
-            const walk = (x - startX) * 3; //scroll-fast
-            carousel.scrollLeft = scrollLeft - walk;
+            scrollIntervalId = setInterval(scrollCarousel, scrollInterval);
         });
     });
 });

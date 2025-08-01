@@ -62,22 +62,13 @@ nav a {
     text-decoration: none;
 }
 
-@keyframes slide {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
 #main-screen .carousel,
 #category-screen .carousel {
     display: flex;
     overflow-x: auto;
     gap: 1rem;
     padding: 1rem 0;
-    animation: slide 30s linear infinite;
+    scroll-behavior: smooth;
 }
 
 #main-screen .carousel img,
