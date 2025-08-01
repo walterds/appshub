@@ -15,8 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (const category in appsByCategory) {
             const categoryEl = document.createElement('div');
             categoryEl.className = 'category-item';
-            categoryEl.innerHTML = `<img src="https://assets.codepen.io/209984/cat-${category.toLowerCase().replace(' ','-')}.png" alt="${category}">
-                                    <p>${category}</p>`;
+            categoryEl.innerHTML = `<img src="assets/images/${category}.png" alt="${category}">`;
             categoryEl.addEventListener('click', () => showCategoryScreen(category));
             categoryGrid.appendChild(categoryEl);
         }
