@@ -2,7 +2,7 @@
 body {
     font-family: sans-serif;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
 }
 
 .container {
@@ -15,13 +15,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to bottom, #4a90e2, #2a62a9);
+    background: linear-gradient(to bottom, #ffffff, #fffffe);
     color: white;
     text-align: center;
 }
 
 #splash-screen .logo {
-    max-width: 150px;
+    max-width: 300px;
     margin-bottom: 1rem;
 }
 
@@ -78,7 +78,7 @@ nav a {
 
 #main-screen .category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 1rem;
     margin-top: 1rem;
 }
